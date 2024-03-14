@@ -12,4 +12,5 @@ $posts = $db
     ->execute($query, $params)
     ->fetchAll();
 
+$title = "Main";
 require "views/index.view.php";

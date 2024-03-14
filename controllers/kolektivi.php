@@ -12,4 +12,5 @@ $posts = $db
     ->execute($query, $params)
     ->fetchAll();
 
+$title = "Kolektīvi";
 require "views/kolektivi.view.php";
