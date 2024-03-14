@@ -1,0 +1,30 @@
+body{
+    margin:2;
+    font-family: 'Helvetica', Sans-serif;	
+}
+
+table,td, th{
+    border:1px solid gray;
+}
+td,th{
+    padding:5px;
+}
+table{
+    border-collapse: collapse;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+a{
+    color: gray;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 150%;
+}
+a:hover{
+    color:lightgreen;
+}
+li{
+    padding-bottom: 3px;
+}

@@ -1,8 +1,8 @@
 <?php
 
-require "../Database.php";
+require "Database.php";
 
-$config = require ("../config.php");
+$config = require ("config.php");
 
 $query = "SELECT * FROM pasakumi";
 $params = [];
@@ -12,4 +12,4 @@ $posts = $db
     ->execute($query, $params)
     ->fetchAll();
 
-require "../views/index.view.php";
+require "views/index.view.php";
