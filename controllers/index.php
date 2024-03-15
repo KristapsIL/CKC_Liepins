@@ -12,5 +12,5 @@ $posts = $db
     ->execute($query, $params)
     ->fetchAll();
 
-$title = "Main";
+$title = "Pasākumi";
 require "views/index.view.php";
