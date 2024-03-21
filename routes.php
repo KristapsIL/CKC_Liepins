@@ -1,6 +1,7 @@
 <?php
 
 return [
-    "/" => "controllers/index.php",
-    "/kolektivi" => "controllers/kolektivi.php"
+    "/" => "controllers/pasakumi.php",
+    "/kolektivi" => "controllers/kolektivi.php",
+    "/create" => "controllers/create-pasakumi.php"
 ];

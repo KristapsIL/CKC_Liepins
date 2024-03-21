@@ -3,7 +3,6 @@
 require "Database.php";
 
 $config = require ("config.php");
-
 $query = "SELECT * FROM pasakumi";
 $params = [];
 
@@ -13,4 +12,4 @@ $posts = $db
     ->fetchAll();
 
 $title = "Pasākumi";
-require "views/index.view.php";
+require "views/pasakumi.view.php";
