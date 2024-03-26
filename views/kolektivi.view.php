@@ -5,11 +5,16 @@
         <tr>
             <th>Kolektīvs</th>
             <th>Apraksts</th>
+            <th></th>
         </tr>
         <?php foreach($posts as $post){ ?>
         <tr>
             <td><?= $post["NAME"] ?></td>
             <td><?= $post["DESCRIPTION"] ?></td>
+            <td method="POST" action="/delete-kolektivi">
+            <input type="hidden" name="id" value=" <?= $post['id'] ?>">
+            <Button>Delete</Button>
+            </td>
         </tr>
         <?php } ?>
     </table>

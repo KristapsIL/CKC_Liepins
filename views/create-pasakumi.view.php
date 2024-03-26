@@ -1,6 +1,6 @@
 <?php require "components/head.php" ?>
     <?php require "components/navbar.php" ?>
-    <h1>Pasākumi Cēsīs</h1>
+    <h1>Pasākumi Cēsīs Create</h1>
     <form method="POST">
         <label>Laiks:
             <input name='date_time' />
