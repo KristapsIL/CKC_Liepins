@@ -11,9 +11,11 @@
         <tr>
             <td><?= $post["NAME"] ?></td>
             <td><?= $post["DESCRIPTION"] ?></td>
-            <td method="POST" action="/delete-kolektivi">
-            <input type="hidden" name="id" value=" <?= $post['id'] ?>">
-            <Button>Delete</Button>
+            <td>
+                <form method="POST" action="/delete-kolektivi">
+                <input type="hidden" name="id" value=" <?= $post['id'] ?>">
+                <Button>Delete</Button>
+                </form>
             </td>
         </tr>
         <?php } ?>
