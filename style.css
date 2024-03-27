@@ -28,3 +28,12 @@ a:hover{
 li{
     padding-bottom: 3px;
 }
+label{
+    position: relative;
+    display: inline-block;
+}
+.error{
+    position: absolute;
+    top:100%;
+    font-size: 0.8em;
+}

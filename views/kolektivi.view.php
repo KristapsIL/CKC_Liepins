@@ -9,8 +9,8 @@
         </tr>
         <?php foreach($posts as $post){ ?>
         <tr>
-            <td><?= $post["NAME"] ?></td>
-            <td><?= $post["DESCRIPTION"] ?></td>
+            <td><?= htmlspecialchars($post["NAME"]) ?></td>
+            <td><?= htmlspecialchars($post["DESCRIPTION"]) ?></td>
             <td>
                 <form method="POST" action="/delete-kolektivi">
                 <input type="hidden" name="id" value=" <?= $post['id'] ?>">

@@ -4,9 +4,15 @@
     <form method="POST">
         <label>kolektivs:
             <input name='kolektivs' />
+            <?php if(isset($errors["kolektivs"])) {?>
+            <p class="error"><?= $errors["kolektivs"]?></p>
+            <?php } ?>
         </label>
         <label>Apraksts:
             <input name='apraksts'/>
+            <?php if(isset($errors["apraksts"])) {?>
+            <p class="error"><?= $errors["apraksts"]?></p>
+            <?php } ?>
         </label>
         <button >Submit</button>
     </form>
