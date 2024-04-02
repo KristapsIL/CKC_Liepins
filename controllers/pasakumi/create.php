@@ -40,4 +40,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 
 $title = "Create Pasakumi";
-require "views/create-pasakumi.view.php";
+require "views/pasakumi/create.view.php";

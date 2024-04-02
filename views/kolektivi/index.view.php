@@ -1,5 +1,5 @@
-<?php require "components/head.php" ?>
-<?php require "components/navbar.php" ?>
+<?php require "views/components/head.php" ?>
+<?php require "views/components/navbar.php" ?>
 <h1>Kolektīvi</h1>
     <table>
         <tr>
@@ -13,11 +13,10 @@
             <td><?= htmlspecialchars($post["DESCRIPTION"]) ?></td>
             <td>
                 <form method="POST" action="/delete-kolektivi">
-                <input type="hidden" name="id" value=" <?= $post['id'] ?>">
-                <Button>Delete</Button>
+                <Button name="id" value=" <?= $post['id'] ?>">Delete</Button>
                 </form>
             </td>
         </tr>
         <?php } ?>
     </table>
-<?php require "components/footer.php" ?>
+<?php require "views/components/footer.php" ?>

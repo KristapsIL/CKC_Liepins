@@ -35,4 +35,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 
 $title = "Create Pasakumi";
-require "views/create-kolektivi.view.php";
+require "views/kolektivi/create.view.php";

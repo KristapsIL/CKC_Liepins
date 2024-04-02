@@ -17,13 +17,19 @@ nav{
     justify-content: space-evenly;
 }
 a{
-    color: gray;
+    color: darkgray;
     text-decoration: none;
     transition: color 0.3s;
     font-size: 150%;
 }
 a:hover{
     color:lightgreen;
+}
+ul{
+    list-style-type: none;
+    color: darkgray;
+    text-decoration: none;
+    font-size: 150%;
 }
 li{
     padding-bottom: 3px;

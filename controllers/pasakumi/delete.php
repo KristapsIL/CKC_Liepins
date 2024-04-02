@@ -16,4 +16,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 
 $title = "Delete Pasakumi";
-require "views/delete-pasakumi.view.php";
+require "views/pasakumi/delete.view.php";

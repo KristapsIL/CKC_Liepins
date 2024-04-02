@@ -1,6 +1,6 @@
-<?php require "components/head.php" ?>
-    <?php require "components/navbar.php" ?>
-    <h1>Pasākumi Cēsīs Create</h1>
+<?php require "views/components/head.php" ?>
+    <?php require "views/components/navbar.php" ?>
+    <h1>Pasākumi Create</h1>
     <form method="POST">
         <label>Laiks:
             <input name='date_time' />
@@ -22,4 +22,4 @@
         </label>
         <button >Submit</button>
     </form>
-<?php require "components/footer.php" ?>
+<?php require "views/components/footer.php" ?>

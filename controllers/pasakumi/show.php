@@ -1,10 +1,10 @@
 <?php
 
 require "Database.php";
-
 $config = require ("config.php");
-$query = "SELECT * FROM pasakumi";
-$params = [];
+
+$params[":id"] = $_GET["id"];
+$query = "SELECT * FROM pasakumi WHERE id = :id";
 
 $db = new Database($config);
 $posts = $db
@@ -12,4 +12,4 @@ $posts = $db
     ->fetchAll();
 
 $title = "Pasākumi";
-require "views/pasakumi.view.php";
+require "views/pasakumi/show.view.php";
