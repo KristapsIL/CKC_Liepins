@@ -5,12 +5,14 @@
     <?php foreach($posts as $post){ ?>
     <li>
     <?= htmlspecialchars($post["date_time"]." / ".$post["nosaukums"]." / ".$post["norises_vieta"]) ?>
-        <form method="POST" action="/delete-pasakumi">
+    <label>
+        <form class="delete-form" method="POST" action="/delete-pasakumi">
         <Button name="id" value=" <?= $post['id'] ?>">Delete</Button>
         </form>
-        <form action="/pasakumi-edit">
+        <form class="edit-form" action="/edit-pasakumi">
         <Button name="id" value=" <?= $post['id'] ?>">edit</Button>
         </form>
+    </label>
     </li>
     <?php } ?>
     </ul>

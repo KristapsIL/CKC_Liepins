@@ -9,7 +9,8 @@
         </tr>
         <?php foreach($posts as $post){ ?>
         <tr>
-            <td><?= htmlspecialchars($post["NAME"]) ?></td>
+            <td><a class="kolekt" href="/show-kolektivi?id=<?= $post['id'] ?> ">
+            <?= htmlspecialchars($post["NAME"]) ?></a></td>
             <td><?= htmlspecialchars($post["DESCRIPTION"]) ?></td>
             <td>
                 <form method="POST" action="/delete-kolektivi">

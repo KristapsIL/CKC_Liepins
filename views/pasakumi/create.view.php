@@ -3,7 +3,7 @@
     <h1>Pasākumi Create</h1>
     <form method="POST">
         <label>Laiks:
-            <input name='date_time' />
+            <input name='date_time' type="datetime-local"/>
             <?php if(isset($errors["date_time"])) {?>
             <p class="error"><?= $errors["date_time"]?></p>
             <?php } ?>
