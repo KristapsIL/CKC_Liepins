@@ -1,5 +1,6 @@
 <?php
 require "Database.php";
+require "Validator.php";
 
 $config = require ("config.php");
 $db = new Database($config);
@@ -7,20 +8,14 @@ $db = new Database($config);
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $errors = [];
 
-    if(trim($_POST["date_time"]) == null){
+    if($_POST["date_time"] == null){
         $errors["date_time"] = "Time can not be empty";
     }
-    if(strlen($_POST["nosaukums"]) > 255){
-        $errors["nosaukums"] = "Name can not be longer than 255 chars";
+    if(!Validator::string($_POST["nosaukums"], min: 1, maxlen: 255)){
+        $errors["nosaukums"] = "Name is too long or empty";
     }
-    if(trim($_POST["nosaukums"]) == null){
-        $errors["nosaukums"] = "nosaukums can not be empty";
-    }
-    if(strlen($_POST["norises_vieta"]) > 255){
-        $errors["norises_vieta"] = "norises vieta can not be longer than 255 chars";
-    }
-    if(trim($_POST["norises_vieta"]) == null){
-        $errors["norises_vieta"] = "norises vieta can not be empty";
+    if(!Validator::string($_POST["norises_vieta"], min: 1, maxlen: 255)){
+        $errors["norises_vieta"] = "Norises vieta is too long or empty";
     }
 
     if(empty($errors)){

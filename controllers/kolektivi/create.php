@@ -1,5 +1,6 @@
 <?php
 require "Database.php";
+require "Validator.php";
 
 $config = require ("config.php");
 $db = new Database($config);
@@ -7,18 +8,13 @@ $db = new Database($config);
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $errors = [];
 
-    if(trim($_POST["kolektivs"]) == null){
-        $errors["kolektivs"] = "kolektivs can not be empty";
+    if(!Validator::string($_POST["kolektivs"], min: 2, maxlen: 255)){
+        $errors["kolektivs"] = "kolektivs is empty or too long";
     }
-    if(strlen($_POST["kolektivs"]) > 255){
-        $errors["kolektivs"] = "kolektivs can not be longer than 255 chars";
+    if(!Validator::string($_POST["apraksts"], min: 2, maxlen: 255)){
+        $errors["apraksts"] = "apraksts is empty or too long";
     }
-    if(trim($_POST["apraksts"]) == null){
-        $errors["apraksts"] = "apraksts can not be empty";
-    }
-    if(strlen($_POST["apraksts"]) > 255){
-        $errors["apraksts"] = "apraksts can not be longer than 255 chars";
-    }
+
     if(empty($errors)){
         $query = "INSERT INTO kolektivi (name, description) 
         VALUES (:kolektivs, :apraksts);";
